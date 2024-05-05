@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/Instagram")
 public class PostagemController {
 
     // Validação e criação de postagem
@@ -47,7 +47,6 @@ public class PostagemController {
         if (!"654789".equals(postagemId)) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Postagem não encontrada");
         }
-        // Simulação de verificação de autorização
         return ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
     }
 }

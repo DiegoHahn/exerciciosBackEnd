@@ -13,7 +13,6 @@ public class UsuarioController{
     // Validação e criação de usuário
     @PostMapping("/usuario")
     public ResponseEntity<String> criarUsuario(@RequestBody Usuario usuario) {
-
         if (usuario.getNome() == null || usuario.getEmail() == null || usuario.getSenha() == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Dados mal formatados");
         }
